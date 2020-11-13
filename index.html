@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Universal Converter</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<h1 id = "h"> Unit Converter</h1>
+
+<center>
+
+        <p>Category:
+                <select onclick="choose()"  id = "category">
+                        <option value="Length">Length</option>
+                        <option value="Temperature">Temperature</option>
+                        <option value="Area">Area</option>
+                        <option value="Volume">Volume</option>
+                        <option value="Weight">Weight</option>
+                        <option value="Time">Time</option>
+                </select>
+        </p>
+
+<input type="button" onmousedown="swap()" onmouseup="swap()" value="⇄">
+
+<table>
+
+ <th>From:</th><th>To:</th>
+    
+ <tr>
+    <td><input type="number" id="fromValue"></td>
+    <td><input type="number" id="toValue" disabled></td>
+    <!-- <td><input type="number" id="toValue" readonly></td> -->
+</tr>
+    
+ <tr>
+    <td><select id = "unitFrom" class="time" onclick="calculate()" onkeypress="calculate()"></select></td>
+    <td><select id = "unitTo" class="time" onclick="calculate()" onkeypress="calculate()"></select></td>
+</tr>
+</table>
+
+<input type="button" onclick="calculate(); emptyInput();" value="Start Conversion">
+<input type="button" onclick="addOptions('New Unit', 'unitFrom'); addOptions('New Unit', 'unitTo');" value="New Unit Demo">
+<input type="button" onclick="addUnit()" id = "add" value="Add Unit">
+<input type="button" onclick="listView()" id = "listView" value="≡">
+
+<br><br>
+
+<div><input type="file" id="myFile"></div>
+
+<p> <label hidden="hidden" id = "newUnitText">New Unit:</label>
+<input hidden="hidden" id="newUnitValue" type='text'>
+<div id="info" hidden = "hidden"><p><strong>Write formulas as follows:<br></strong>+(n-m)*(l/o)</p></div>
+<form id="form" action=""><table><tr><td id="to" name="khara"></td> <td id="in"></td></tr></table>
+</form>
+<input hidden="hidden" type="button" value="Submit" id = "sub" onclick="submitForm()">
+</p>
+
+<div id = "fuck"></div>                                      
+
+</center>
+    
+<script type="text/javascript" src="app.js"></script>
+<script src="./Calculate.js"></script>
+<script src="./Length.js"></script>
+<script src="./Temperature.js"></script>
+<script src="./Area.js"></script>
+<script src="./Volume.js"></script>
+<script src="./Weight.js"></script>
+<script src="./Time.js"></script>
+
+</body>
+</html>

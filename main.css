@@ -1,0 +1,26 @@
+h1{
+    /* background-color: aqua; */
+    color: #9e2020;
+    /* color: blue; */
+    font-weight: bold;
+    text-align: center;
+}
+
+.time{
+    margin-left: 20px;
+    /* height: 190px; */
+}
+
+ul li {
+    display: inline-block;
+}
+
+#info {
+    margin-bottom: 15px;
+    /* padding: 4px 12px; */
+    margin-left: 310px;
+    margin-right: 310px;
+
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
